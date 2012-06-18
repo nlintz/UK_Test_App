@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UK Testing App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="datepicker/css/datepicker.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="bootstrap/docs/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/docs/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/docs/assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/docs/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="bootstrap/docs/assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">UK Testing App</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Help</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Submit Test? -->
+    
+    <div class="container">
+    
+	
+	<!-- Login Collapsable -->
+		<button class="btn btn-danger" data-toggle="collapse" data-target="#login">
+  		Login
+		</button>
+		<div id="login" class="collapse in">
+		<form class="well">
+  		<label>App Reference ID</label>
+  		<input type="text" class="span3" placeholder="Please Enter The App Reference ID">
+		<label>Channel</label>
+		<select>
+  			<option value="UA">UA</option>
+  			<option value="Zoot">Zoot</option>
+  			<option value="TS3">TS3</option>
+  			<option value="">Null (empty string)</option>
+		</select>
+  		<label>Source</label>
+		<select>
+  			<option value="UAE">UAE</option>
+  			<option value="SAA">SAA</option>
+  			<option value="IPC">IPC</option>
+  			<option value="ATT">ATT</option>
+  			<option value="">Null (empty string)</option>
+		</select>
+		<label>App Type</label>
+		<select>
+  			<option value="New">New</option>
+  			<option value="New">Update</option>
+  			<option value="New">Additional</option>
+		</select>  		
+  		<label>Country Code</label>
+  		<input type="text" class="span3" placeholder="Please Enter The Country Code">
+  		<label>App Channel</label>
+  		<select>
+  			<option value="None">None</option>
+  			<option value="QBMSCard">QBMSCard</option>
+  			<option value="QBMSBillingManager">QBMSBillingManager</option>
+  			<option value="QHG">QHG</option>
+  			<option value="QBTerminal">QBTerminal</option>
+  			<option value="QBSmallBusinessFinanceWork">QBSmallBusinessFinanceWork</option>
+  			<option value="CSQB">CSQVB</option>
+  			<option value="POSMS">POSMS</option>
+  			<option value="CRPMS">CRPMS</option>
+  			<option value="Signup">Signup</option>
+  			<option value="IOT">IOT</option>
+  			<option value="MobileApp">MobileApp</option>
+  			<option value="Vivonet">Vivonet</option>
+  			<option value="QBO">QBO</option>
+  			<option value="POS">POA</option>
+  			<option value="QBDT">QBDT</option>
+  			<option value="">Null (empty string)</option>
+		</select>
+		<label>Intuit Promo Code</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Intuit Promo Code">
+	<!-- Java Date Type -->  	
+  		<label>Submit Date</label>
+  		<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  		<input class="span2" size="16" type="text" value="12-02-2012">
+  		<span class="add-on"><i class="icon-th"></i></span>
+		</div>	
+		</form>
+		</div>
+	<!-- Account Type Collapsable -->
+		<button class="btn btn-danger" data-toggle="collapse" data-target="#acct_type">
+  		Account Type
+		</button>
+		<div id="acct_type" class="collapse in">
+		<form class="well">
+		
+  		<div class="btn-group" data-toggle-name="is_business" data-toggle="buttons-radio" >
+  		<button type="button" value="0" class="btn" data-toggle="button">Business</button>
+  		<button type="button" value="1" class="btn" data-toggle="button">Individual</button>
+		</div>
+		<input type="hidden" name="is_business" value="0" />
+  		
+		</form>
+		</div>
+		
+    <!-- BUSINESS BRANCH  -->
+    
+	<!-- Business Details Collapsable -->
+		<button class="btn btn-primary" data-toggle="collapse" data-target="#business_details">
+  		Business Information
+		</button>
+		<div id="business_details" class="collapse in">
+		<form class="well">
+		
+  		<label>Email Address</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Email Address">
+  		<label>Name</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Name">
+  		<label>Ownership Type</label>
+  		<select>
+  			<option value="Individuals">Individuals</option>
+  			<option value="SoleTraders">Sole Traders</option>
+  			<option value="Partnerships">Partnerships</option>
+  			<option value="PrivateLimitedCompany">Private Limited Company</option>
+  			<option value="LimitedLiabilityPartnership">Limited Liability Partnership</option>
+  			<option value="PublicLimitedCompany">Public Limited Company</option>
+  			<option value="PublicLimitedCompany">Public Limited Company</option>
+  			<option value="RegisteredCharity">Registered Charity</option>
+  			<option value="UnregisteredCharity">Unregistered Charity</option>
+  			<option value="ClubsAndSocieties">Clubs And Societies</option>
+  		</select>
+  		<label>Business ID</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Business ID">
+  		<label>Business Description</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Business Description">
+  		<label>Industry Code</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Industry Code">
+		</form>
+		</div>
+	<!-- Mailing Address Collapsable -->
+		<button class="btn btn-primary" data-toggle="collapse" data-target="#m_address">
+  		Mailing Address
+		</button>
+		<div id="m_address" class="collapse in">
+		<form class="well">
+  		<label>Line 1</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Address Line 1">
+  		<label>Line 2</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Address Line 2">
+  		<label>City</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your City">
+  		<label>Postal Code</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Postal Code">
+  		<label>County</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your County">
+  		<label>District</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your District">
+  		<label>Phone Number</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Phone Number">
+  		
+		</form>
+		</div>	
+	<!-- Owner Details Collapsable -->
+		<button class="btn btn-primary" data-toggle="collapse" data-target="#o_details">
+  		Owner Details
+		</button>
+		<div id="o_details" class="collapse in">
+		<form class="well">
+		
+  		<label>Ownership %</label>
+  		<div class="controls">
+  		<div class="input-append">
+  		<input class="span2" id="appendedInput" size="16" type="text">
+  		<span class="add-on">%</span>
+  		</div>
+  		</div>
+  		
+  		<label>Birthday</label>
+  		<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  		<input class="span2" size="16" type="text" value="12-02-2012">
+  		<span class="add-on"><i class="icon-th"></i></span>
+		</div>	
+  		
+  		<label>First Name</label>
+  		<input type="text" class="span3" placeholder="Type something…">
+  		<label>Middle Name</label>
+  		<input type="text" class="span3" placeholder="Type something…">
+  		<label>Last Name</label>
+  		<input type="text" class="span3" placeholder="Type something…">
+  		<label>Residential Address</label>
+  		<input type="text" class="span3" placeholder="Type something…">
+  		<label>Add Another Owner</label>
+  		<input type="text" class="span3" placeholder="Type something…">
+  		
+		</form>
+		</div>
+	<!-- Bank Details Collapsable -->
+		<button class="btn btn-primary" data-toggle="collapse" data-target="#bank_details">
+  		Bank Details
+		</button>
+		<div id="bank_details" class="collapse in">
+		<form class="well">
+  		<label>Bank Number</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Bank Number">
+  		<label>Routing Number</label>
+  		<input type="text" class="span3" placeholder="Please Enter Your Routing Number">
+		</form>
+		</div>
+	
+	<!-- END BUSINESS BRANCH -->
+	
+	<!-- START INDIVIDUAL BRANCH -->
+	
+	<!-- Personal Info -->
+	<button class="btn btn-warning" data-toggle="collapse" data-target="#p_info">
+ 	Personal Information
+	</button>
+	<div id="p_info" class="collapse in">
+	<form class="well">
+  	<label>Name</label>
+  	<input type="text" class="span3" placeholder="Please Enter Your Name">
+  	<label>Birthday</label>
+  	<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  	<input class="span2" size="16" type="text" value="12-02-2012">
+  	<span class="add-on"><i class="icon-th"></i></span>
+	</div>
+	<label>Phone</label>
+  	<input type="text" class="span3" placeholder="Please Enter Your Phone Number">
+	<label>Zip Code</label>
+  	<input type="text" class="span3" placeholder="Please Enter Your Zip Code">
+	
+	</form>
+	</div>
+	
+	<!-- Bank Info -->
+	<button class="btn btn-warning" data-toggle="collapse" data-target="#bank_details_indiv">
+  	Bank Details
+	</button>
+	<div id="bank_details_indiv" class="collapse in">
+	<form class="well">
+  	<label>Bank Number</label>
+  	<input type="text" class="span3" placeholder="Please Enter Your Bank Number">
+  	<label>Routing Number</label>
+  	<input type="text" class="span3" placeholder="Please Enter Your Routing Number">
+	</form>
+	</div>
+		
+	<!-- END INDIVIDUAL BRANCH -->
+		
+	<!-- Swiper Collapsable -->
+		<button class="btn btn-success" data-toggle="collapse" data-target="#swiper">
+  		Swiper
+		</button>
+		<div id="swiper" class="collapse in">
+		<form class="well">
+		<span class="help-block">Do You Want a Swiper?.</span>
+  		<div class="btn-group" data-toggle-name="wants_swiper" data-toggle="buttons-radio" >
+  		<button type="button" value="0" class="btn" data-toggle="button">Yes</button>
+  		<button type="button" value="1" class="btn" data-toggle="button">No</button>
+		</div>
+		<input type="hidden" name="wants_swiper" value="0" />
+		</form>
+		</div>
+	
+	
+	<button type="submit" class="btn">Submit</button>
+	
+    </div> <!-- /container -->
+    
+
+	
+    <!-- End Sumbit --> 
+    
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/docs/assets/js/jquery.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-button.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
+    <script src="bootstrap/docs/assets/js/bootstrap-datepicker.js"></script>
+
+ 
+
+  </body>
+</html>
